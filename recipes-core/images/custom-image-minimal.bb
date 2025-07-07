@@ -20,3 +20,15 @@ EXTRA_USERS_PARAMS = "\
     "
 
 IMAGE_INSTALL:append = " packagegroup-core-buildessential nano i2c-tools"
+IMAGE_INSTALL:append = " kernel-module-rtl8188eu \
+                         linux-firmware \
+                         dhcpcd \
+                         iw \
+                         wpa-supplicant \
+                         wireless-regdb-static "
+
+KERNEL_MODULE_AUTOLOAD:append = " \
+    rtl8188eu \
+    "
+
+IMAGE_ROOTFS_MAXSIZE = "2097152"
